@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型  打字游戏</title>
+</head>
+<style>
+body{
+	margin:0;
+	padding:0;
+	list-style: none;
+	background: #645e5e
+}
+.bac{
+	  width:100%;
+	  background: contain;
+	  position:absolute;
+	  left:0;
+	  top:-150px;
+}
+.play{
+	  border:5px solid #368990;
+	  background:#368990;
+	  border-radius: 20px;
+	  text-align: center;
+	  line-height: 70px;
+	  font-size:50px;
+	  width:200px;
+	  height:70px;
+	  position:absolute;
+	  top:282px;
+	  left:583px;
+	  box-shadow: 0 0 3px;
+	  opacity:1;
+	  color:#fff;
+	}
+	.bot{
+	  width:100%;
+    height:30px;
+	  position:fixed;
+	  bottom:55px;
+	  opacity: 0;
+	  z-index:5;
+    
+	}
+    .one{
+      border:5px solid #368990;
+      background:#368990;
+      border-radius: 20px;
+      text-align: center;
+      line-height: 70px;
+      font-size:30px;
+      width:150px;
+      height:70px;
+      box-shadow: 0 0 3px;
+      float:left;
+      margin-left:150px;
+      color:#fff;
+    }
+    .two{
+      border:5px solid #368990;
+      background:#368990;
+      border-radius: 20px;
+      text-align: center;
+      line-height: 70px;
+      font-size:30px;
+      width:200px;
+      height:70px;
+      box-shadow: 0 0 3px;
+      float:left;
+      margin-left:100px;
+      margin-right:100px;
+      color:#fff;
+
+    }
+    .life{
+      float:left;
+      padding-left: 20px;
+    }
+    .life1{
+      text-align: center;
+      line-height: 70px;
+      font-size:30px;
+      font-weight: bold;
+      float:left;
+      color:#fff;
+
+    }
+    .fen1{
+      text-align: center;
+      line-height: 70px;
+      font-size:30px;
+      font-weight: bold;
+      float:left;
+      color:#fff;
+
+    }
+    .fen{
+      float:left;
+    }
+    .over{
+      border:5px solid #368990;
+  	  background:#368990;
+  	  border-radius: 20px;
+  	  text-align: center;
+  	  line-height: 70px;
+  	  font-size:40px;
+      color:#fff;
+  	  width:300px;
+  	  height:70px;
+  	  position:absolute;
+  	  top:282px;
+  	  left:583px;
+  	  box-shadow: 0 0 3px;
+  	  display:none;
+    }
+    .next{
+      border:5px solid #368990;
+  	  background:#368990;
+  	  border-radius: 20px;
+  	  text-align: center;
+  	  line-height: 70px;
+  	  font-size:50px;
+  	  width:200px;
+  	  height:70px;
+  	  position:absolute;
+  	  top:282px;
+  	  left:583px;
+  	  box-shadow: 0 0 3px;
+  	  display:none;
+  	  color:#fff;
+    }
+    .three{
+      border:5px solid #368990;
+      background:#368990;
+      border-radius: 20px;
+      font-size:30px;
+      width:170px;
+      height:70px;
+      box-shadow: 0 0 3px;
+      float:left;
+    }
+    .zfen{
+      float:left;
+      color:#fff;
+      line-height: 70px;
+    }
+    .zfen1{
+      text-align: center;
+      line-height: 70px;
+      font-size:30px;
+      font-weight: bold;
+      color:#fff;
+
+    }
+    .four{
+      border:5px solid #368990;
+      background:#368990;
+      border-radius: 20px;
+      font-size:30px;
+      width:170px;
+      height:70px;
+      box-shadow: 0 0 3px;
+      float:left;
+      margin-right:100px;
+    }
+    .guan{
+      float:left;
+      color:#fff;
+      line-height: 70px;
+    }
+    .qia{
+      text-align: center;
+      line-height: 70px;
+      font-size:30px;
+      font-weight: bold;
+      color:#fff;
+    }
+    .ta ng{
+      position:absolute;
+      top:20px;
+      left:30px;
+      z-index: 6;
+      width:800px;
+      height:600px;
+    }
+   .tui{
+    width:100px;
+    height:50px;
+    background:#368990;
+    border-radius: 20px;
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size: 20px;
+    color:#fff;
+    text-align: center;
+    line-height: 50px;
+    opacity: 0;
+   }
+</style>
+<body>
+<div class="background">
+		<img src="img/679.jpg" alt="" class="bac">
+		<div class="play">play</div>
+</div>
+	<div class="bot">
+  <div class="one">
+		    <div class="life">生命：</div><div class="life1">3</div>
+  </div>
+  <div class="two">
+        <div class="fen">当前分数：</div><div class="fen1">0</div>
+  </div>
+   <div class="four">
+        <div class="guan">关卡：</div><div class="qia">1</div>
+  </div>
+  <div class="three">
+        <div class="zfen">总分数：</div><div class="zfen1">0</div>
+  </div>
+	</div>
+	<div class="first"></div>
+	<div class="over">GAME OVER</div>
+	<div class="next">下一关</div>
+  <img src="img/tang.png" alt="" class="tang">
+  <embed src="" type="">
+  <div class="tui">退出游戏</div>
+</body>
+<script src="function.js"></script>
+<script src="animate.js"></script>
+<script>
+
+function game(arr1){
+	this.arr=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+	this.imgarr={A:"img/A.png",B:"img/B.png",C:"img/C.png",D:"img/D.png",E:"img/E.png",F:"img/F.png",G:"img/G.png",H:"img/H.png",I:"img/I.png",J:"img/J.png",K:"img/K.png",L:"img/L.png",M:"img/M.png",N:"img/N.png",O:"img/O.png",P:"img/P.png",Q:"img/Q.png",R:"img/R.png",S:"img/S.png",T:"img/T.png",U:"img/U.png",V:"img/V.png",W:"img/W.png",X:"img/X.png",Y:"img/Y.png",Z:"img/Z.png"}
+	//this.playy=document.getElementsByClassName("play")[0];
+	this.bac=document.getElementsByClassName("background")[0];
+	this.bot=document.getElementsByClassName("bot")[0];
+	this.life1=document.getElementsByClassName('life1')[0];
+	this.fen1=document.getElementsByClassName('fen1')[0];
+	this.life=document.getElementsByClassName('life')[0];
+	this.fen=document.getElementsByClassName('fen')[0];
+	this.over=document.getElementsByClassName('over')[0];
+	this.nex=document.getElementsByClassName("next")[0];
+	this.zfen=document.getElementsByClassName("zfen")[0];
+	this.zfen1=document.getElementsByClassName("zfen1")[0];
+	this.li=3;
+	this.fs=0;
+	this.thd=10;
+	this.t;
+	this.zf1=0;
+	this.guan=document.getElementsByClassName('guan')[0];
+	this.guanqia=document.getElementsByClassName('qia')[0];
+  this.guanq=1;
+	this.playy=document.getElementsByClassName('play')[0];
+	this.len=3;
+	this.cw=document.documentElement.clientWidth;
+	this.Ch=document.documentElement.clientHeight;
+	this.currentLetter=[];
+  this.currentSpan=[];
+  this.speed;
+  this.tui=document.getElementsByClassName('tui')[0];
+}
+game.prototype={
+	play:function(){
+	  /*创建随机字母*/
+	  /*创建随机span*/
+	    var that=this;
+	     //animate(playy,{opacity:0},20);
+    that.playy.onclick=function(){
+    // alert(1)
+      animate(that.playy,{opacity:0},300);
+      animate(that.bot,{opacity:1},300);
+      animate(that.tui,{opacity:1},300);
+      that._getRand(that.len);
+      that._getSpan(that.currentLetter);
+      that._move(); 
+      that._key();
+    }
+	},
+	_getRand:function(num){
+	   var newarr=[];
+	   for (var i = 0; i < num; i++) {
+	      var letter=this.arr[Math.floor(Math.random()*this.arr.length)];
+	   	  while(this._checkRand(letter,this.currentLetter)){
+                letter=this.arr[Math.floor(Math.random()*this.arr.length)];
+	   	  }
+           this.currentLetter.push(letter);
+           newarr.push(letter)
+	   	}
+	   	  return newarr;
+	},
+	_checkRand:function(ele,currentLetter){
+          for (var i = 0; i < currentLetter.length; i++) {
+               if(ele==currentLetter[i]){
+                  return true;
+               }
+          }
+          return false;
+	},
+	_getSpan:function(arr1){
+		  for (var i = 0; i < arr1.length; i++) {
+	           var spans=document.createElement("span");
+	           spans.innerHTML="<img src="+this.imgarr[arr1[i]]+">";
+	           document.body.appendChild(spans)
+	           var lefts=Math.floor(Math.random()*(this.cw-200)+100)
+	           spans.lefts=lefts;
+	           var tops=Math.floor(Math.random()*30-70);
+	           spans.tops=tops
+	           while(this._checkPos(spans,this.currentSpan)){
+                     lefts=Math.floor(Math.random()*(this.cw-200)+100)
+	                 spans.lefts=lefts;
+	           }
+	           spans.style="position:absolute;left:"+lefts+"px;top:"+tops+"px;";
+	           this.currentSpan.push(spans);
+		  }
+		  
+	},
+	_checkPos:function(ele,eleArr){
+	      for (var i = 0; i < eleArr.length; i++) {//console.log(currarr)
+               if(ele.lefts>eleArr[i].lefts-150&&ele.lefts<eleArr[i].lefts+150){
+                     return true;
+           }
+          }return false;
+	},
+	_move:function(){
+	      speed=2;
+	      var that=this;
+	      that.t=setInterval(function(){
+		      for (var i = 0; i < that.currentSpan.length; i++) {
+                   var tops=that.currentSpan[i].offsetTop+speed;
+	               that.currentSpan[i].style.top=tops+"px";
+	               if(that.currentSpan[i].offsetTop+that.currentSpan[i].offsetHeight+5>that.Ch){
+	               //console.log(that.currentSpan[i].offsetTop)
+	                 //console.log(that.currentSpan[i])
+                      document.body.removeChild(that.currentSpan[i]);
+                      that.currentSpan.splice(i,1);
+                      that.currentLetter.splice(i,1);
+                      that._getSpan(that._getRand(1))
+                      that.li--;
+                      that.life1.innerHTML=that.li;
+                      if(that.li<1){
+                         for (var i = 0; i < that.currentSpan.length; i++) {
+                         	document.body.removeChild(that.currentSpan[i]);
+                         }
+                         that.li=0;
+                         that.over.style.display="block"; 
+                         //alert("失败")
+                         clearInterval(that.t)
+                         addEvent(that.over,"click",function(){
+                                location.reload()
+                         });
+                      }
+	               }
+	            };
+	      },40)
+	},
+    _key:function(){
+        var that=this;
+         document.onkeydown=function(e){
+            var e=e||window.event;
+            for (var i = 0; i < that.currentLetter.length; i++) {
+                 var letter=String.fromCharCode(e.keyCode);
+                 if(that.currentLetter[i]==letter){
+                      document.body.removeChild(that.currentSpan[i]);
+                      that.currentSpan.splice(i,1);
+                      that.currentLetter.splice(i,1);
+                      that._getSpan(that._getRand(1))
+                      that.fs++;
+					            that.zf1++;
+       	              that.fen1.innerHTML=that.fs;
+       	              that.zfen1.innerHTML=that.zf1;
+					            if(that.fs==that.thd){
+                         for (var i = 0; i < that.currentSpan.length; i++) {
+                         	document.body.removeChild(that.currentSpan[i]);
+                         	that.fs=0;
+                         }
+                         //alert("下一关")
+                         clearInterval(that.t) 
+                         that.nex.style.display="block";
+                         that.nex.onclick=function(){
+                              that.nex.style.display="none";
+                              that._next();   
+                         }
+                         
+					  }
+                 }
+            }
+         }
+    },
+    _next:function(){
+              this.guanq+=1;
+              this.guanqia.innerHTML=this.guanq;
+              this.len++;
+              if(this.len==16){
+                   alert("通关")
+              }
+              this.zf1++;
+              this.thd+=5;
+              this.fs++;
+              this.speed+=2;
+              this.currentLetter=[];
+              this.currentSpan=[];
+              this._getRand(this.len);
+              this._getSpan(this.currentLetter);
+              this._move(this.currentSpan);
+              this._key(this.currentSpan);
+    }
+}
+var obj=new game();
+        obj.play()
+
+</script>
+</html>
+
+
+
+
+
